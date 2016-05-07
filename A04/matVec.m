@@ -7,5 +7,5 @@ x = [];
     end
     x(i) = xi;
   end
-  x = transpose(x);
+  x = x';
 end
