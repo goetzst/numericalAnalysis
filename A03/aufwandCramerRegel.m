@@ -9,7 +9,10 @@ for i=1:8
   b = floor(100 * rand(1,i));
   tic;
   x = cramerRegel(A, b');
-  elapsed(i) = toc
+  elapsed(i) = toc;
+  tic;
+  x = A\b';
+  elapsed2(i) = toc;
 end
-plot([1:8],elapsed);
-semilogy([1:8],elapsed);
+%%plot([1:8],elapsed, elapsed2);
+semilogy([1:8],elapsed, elapsed2);
