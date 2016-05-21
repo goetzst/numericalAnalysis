@@ -1,4 +1,5 @@
-function y = solveL(L, x)
+function y = solveL(L, P, x)
+  x = P * x;
   for i=1:length(L)
     sums  = 0;
     for j=1:(i-1)
